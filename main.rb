@@ -5,14 +5,16 @@ require './helper'
 
 srand(129)
 
-grid_size = 5
+grid_size = 100
 
 your_strategy = lambda {
   game = Game.new(grid_size: grid_size)
 
-  you = YourPlayer.new(game: game, name: 'Unknown candidate')
+  player1 = YourPlayer.new(game: game, name: 'Jhonny')
+  player2 = YourPlayer.new(game: game, name: 'Alex')
 
-  game.add_player(you)
+  game.add_player(player1)
+  game.add_player(player2)
 
   game.start
 }
